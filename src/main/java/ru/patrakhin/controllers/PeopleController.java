@@ -3,10 +3,9 @@ package ru.patrakhin.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import ru.patrakhin.dao.PersonDAO;
+import ru.patrakhin.models.Person;
 
 
 @Controller
@@ -30,5 +29,24 @@ public class PeopleController {
     public String show(@PathVariable("id") int id, Model model) {
         model.addAttribute("person", personDAO.show(id));
         return "people/show";
+    }
+
+    //Var 1
+    /*@GetMapping("/new")
+    public String newPerson(Model model){
+        model.addAttribute("person", new Person());
+        return "people/new";
+    }*/
+
+    //Var2
+    @GetMapping("/new")
+    public String newPerson(@ModelAttribute("person") Person person){
+        return "people/new";
+    }
+
+    @PostMapping()
+    public String create(@ModelAttribute("person") Person person){
+        personDAO.save(person);
+        return "redirect:/people";
     }
 }
