@@ -69,6 +69,14 @@
       <version>6.2.5.Final</version>
     </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.2.27</version>
+    </dependency>
+
+
   </dependencies>
   <build>
     <finalName>CRUD_App_1_0</finalName>

@@ -9,6 +9,7 @@ import ru.patrakhin.dao.PersonDAO;
 import ru.patrakhin.models.Person;
 
 import javax.validation.Valid;
+import java.sql.SQLException;
 
 
 @Controller
@@ -23,7 +24,7 @@ public class PeopleController {
     }
 
     @GetMapping()
-    public String index(Model model) {
+    public String index(Model model) throws SQLException {
         model.addAttribute("people", personDAO.index());
         return "people/index";
     }
