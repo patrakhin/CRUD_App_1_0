@@ -19,18 +19,18 @@ public class BatchController {
     }
 
     @GetMapping()
-    public String index() { //share string where 2 button
+    public String index() {
         return "batch/index";
     }
 
     @GetMapping("/without")
-    public String withoutBatch() { // action to click on first button
+    public String withoutBatch() {
         personDAO.testMultipleUpdate();
         return "redirect:/people";
     }
 
     @GetMapping("/with")
-    public String withBatch() { // action to click on second button
+    public String withBatch() {
         personDAO.testBatchUpdate();
         return "redirect:/people";
     }
