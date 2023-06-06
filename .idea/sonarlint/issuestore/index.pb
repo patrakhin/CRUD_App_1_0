@@ -10,3 +10,5 @@ Osrc/main/java/ru/patrakhin/config/MySpringMvcDispatcherSerlvetIntitializer.java
 -src/main/java/ru/patrakhin/models/Person.java,7/e/7e92a6af5360fbcc06cfe8d740cb7f2d30058c54
 I
 src/main/webapp/index.jsp,8/e/8e6d3b70c9f5b02570779b0441540d45eceb0ded
+c
+3src/main/java/ru/patrakhin/config/SpringConfig.java,5/0/503844c83956a2304952678ea0d7874a4410e083
